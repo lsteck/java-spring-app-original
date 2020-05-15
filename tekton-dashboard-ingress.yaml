@@ -1,0 +1,13 @@
+  apiVersion: extensions/v1beta1
+  kind: Ingress
+  metadata:
+    name: tekton-dashboard
+    namespace: tekton-pipelines
+  spec:
+    rules:
+    - host: tekton-dashboard.garage-dev-iks-cl-807206-0143c5dd31acd8e030a1d6e0ab1380e3-0000.us-east.containers.appdomain.cloud
+      http:
+        paths:
+        - backend:
+            serviceName: tekton-dashboard
+            servicePort: 9097
